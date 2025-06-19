@@ -1,5 +1,17 @@
 ## End to end flow:   
 **Input text(Prompts) → [Tokenization → Converting to IDs] → [Model processing → Next token prediction → Token selection → Building the response]**    
+## How Tokenizater works?  
+```
+For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
+31373: 'hello'    
+ 6894: 'world'
+
+Special tokens:
+50256: '<|endoftext|>'
+Note: 
+Tokenizer first convert input text 'chars' into 'token' then by the help of lookup table, it maps token with token ID.
+tokenizer.json file contains lookup table for token->token ID, which is used at runtime
+```
 
 ## How Model works?    
 ![image](https://github.com/user-attachments/assets/3eef2074-fd69-47cd-8af0-36bab384a127)    
@@ -13,20 +25,10 @@
    - The selected token is added to our text
    - We repeat until we reach our desired length
 
-
+---
   
  
-```
-For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
-31373: 'hello'    
- 6894: 'world'
 
-Special tokens:
-50256: '<|endoftext|>'
-Note: 
-Tokenizer first convert input text 'chars' into 'token' then by the help of lookup table, it maps token with token ID.
-tokenizer.json file contains lookup table for token->token ID, which is used at runtime
-```
 #### Download LLM localy (Example code)    
 ```
 !uv pip install transformers
