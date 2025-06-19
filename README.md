@@ -1,5 +1,4 @@
-# local_llm
-
+#### Download LLM localy
 ```
 !uv pip install transformers
 
