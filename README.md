@@ -33,9 +33,16 @@ Special tokens:
 
 We need to pass 2 things to LLM:  
  1. Prompts
- 2. Context (for that we can fetch embeddings from vector DB to build context (RAG) )     
+ 2. Context (for that we can fetch embeddings from vector DB to build context (RAG) )      
 
 ![image](https://github.com/user-attachments/assets/48ab2702-0fcb-4acf-9eaa-3b585bccfca9)      
+
+**All other methosds:  ** 
+![image](https://github.com/user-attachments/assets/3be68016-bd6c-43fd-9f0f-1f7af14319bd)    
+
+---
+
+
 
 
   
