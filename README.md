@@ -4,7 +4,7 @@ For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM o
 31373: 'hello'    
  6894: 'world'
 ```
-#### Download LLM localy
+#### Download LLM localy (Example code)    
 ```
 !uv pip install transformers
 
