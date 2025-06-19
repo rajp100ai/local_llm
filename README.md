@@ -42,7 +42,8 @@ We need to pass 2 things to LLM:
 
 ---
 
-
+### Can Function Calling Replace RAG?   
+![image](https://github.com/user-attachments/assets/2d33a0e9-dacf-4700-b92a-b5e423ade8f4)
 
 
   
