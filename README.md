@@ -3,6 +3,9 @@
 For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
 31373: 'hello'    
  6894: 'world'
+
+Special tokens:
+50256: '<|endoftext|>'
 ```
 #### Download LLM localy (Example code)    
 ```
