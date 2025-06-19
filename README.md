@@ -1,3 +1,4 @@
+## End to end flow:   
 **Input text(Prompts) → [Tokenization → Converting to IDs] → [Model processing → Next token prediction → Token selection → Building the response]**    
 
 ## How Model works?    
