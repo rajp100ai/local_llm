@@ -1,4 +1,4 @@
-**Input (Prompt) -> Tokenizer ( converts human-readable text (like "Hello world!") into a sequence of numbers (called tokens) -> LLMs**   
+**Input text → Tokenization → Converting to IDs → Model processing → Next token prediction → Token selection → Building the response**   
 ```
 For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
 31373: 'hello'    
@@ -6,6 +6,9 @@ For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM o
 
 Special tokens:
 50256: '<|endoftext|>'
+Note: 
+Tokenizer first convert input text 'chars' into 'token' then by the help of lookup table, it maps token with token ID.
+tokenizer.json file contains lookup table for token->token ID, which is used at runtime
 ```
 #### Download LLM localy (Example code)    
 ```
