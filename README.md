@@ -1,6 +1,8 @@
 ## End to end flow:   
 **Input text(Prompts) → [Tokenization → Converting to IDs] → [Model processing → Next token prediction → Token selection → Building the response]**    
 ## How Tokenizater works?  
+![image](https://github.com/user-attachments/assets/12c6eea7-2f6d-4203-88d6-dc892241a0b4)    
+
 ```
 For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
 31373: 'hello'    
@@ -8,9 +10,6 @@ For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM o
 
 Special tokens:
 50256: '<|endoftext|>'
-Note: 
-Tokenizer first convert input text 'chars' into 'token' then by the help of lookup table, it maps token with token ID.
-tokenizer.json file contains lookup table for token->token ID, which is used at runtime
 ```
 
 ## How Model works?    
