@@ -74,6 +74,7 @@ We need to pass 2 things to LLM:
            📝 Final Answer
 
 ```
+![image](https://github.com/user-attachments/assets/83f4fdb5-f824-4748-9d1c-eb61b1f6a689)    
 
 
   
