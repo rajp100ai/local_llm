@@ -1,6 +1,7 @@
-## End to end flow:   
-**Input text(Prompts) → [Tokenization → Converting to IDs] → [Model processing → Next token prediction → Token selection → Building the response]**    
-## How Tokenizater works?  
+## End to end flow (1):  
+![image](https://github.com/user-attachments/assets/e5be7bb4-8793-4de5-a6af-f173aa2b9c4f)    
+
+### How Tokenizater works?  
 ![image](https://github.com/user-attachments/assets/12c6eea7-2f6d-4203-88d6-dc892241a0b4)    
 
 ```
@@ -12,7 +13,7 @@ Special tokens:
 50256: '<|endoftext|>'
 ```
 
-## How Model works?    
+### How Model works?    
 ![image](https://github.com/user-attachments/assets/3eef2074-fd69-47cd-8af0-36bab384a127)    
 ![image](https://github.com/user-attachments/assets/fc45709e-33f2-4f8a-a399-f7739043edef)    
 1. We start with our prompt
@@ -25,28 +26,9 @@ Special tokens:
    - We repeat until we reach our desired length
 
 ---
+
+## Also include RAG steps in the end to end flow (2):   
+![image](https://github.com/user-attachments/assets/5ede2a2e-beee-441b-9092-e0466a3ed9fc)
+
+
   
- 
-
-#### Download LLM localy (Example code)    
-```
-!uv pip install transformers
-
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import os
-
-# Create the directory if it doesn't exist
-save_directory = "./local_model" 
-os.makedirs(save_directory, exist_ok=True)
-
-# Load model and tokenizer
-print("Downloading model from Hugging Face Hub...")
-model_name = "distilgpt2"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)
-
-print(f"\nSaving model to {save_directory}...")
-# Save the model and tokenizer to the specified directory
-model.save_pretrained(save_directory)
-tokenizer.save_pretrained(save_directory)
-```
