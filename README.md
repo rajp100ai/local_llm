@@ -1,9 +1,20 @@
+**Input text(Prompts) → [Tokenization → Converting to IDs] → [Model processing → Next token prediction → Token selection → Building the response]**    
+
+## How Model works?    
 ![image](https://github.com/user-attachments/assets/3eef2074-fd69-47cd-8af0-36bab384a127)    
-![image](https://github.com/user-attachments/assets/fc45709e-33f2-4f8a-a399-f7739043edef)     
+![image](https://github.com/user-attachments/assets/fc45709e-33f2-4f8a-a399-f7739043edef)    
+1. We start with our prompt
+2. For each new token:
+   - The model processes all the text so far
+   - It generates probabilities for the next token
+   - We apply temperature and top-k filtering
+   - We sample a token from the resulting distribution
+   - The selected token is added to our text
+   - We repeat until we reach our desired length
 
 
-## Flow  
-**Input text(Prompts) → Tokenization → Converting to IDs → Model processing → Next token prediction → Token selection → Building the response**   
+  
+ 
 ```
 For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
 31373: 'hello'    
