@@ -3,21 +3,28 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import os
 
+# STEP 1
 # Create the directory if it doesn't exist
 save_directory = "./local_model" 
 os.makedirs(save_directory, exist_ok=True)
 
-# Load model and tokenizer
+# STEP 2 (Download)
+# Load model and tokenizer - All language models are trained on "numerical data", not raw strings.  
+# all language models, including newer ones like GPT-4, Gemini 1.5/2.5, Claude, LLaMA, etc., do not understand raw text directly. 
+# They all require tokenization as a first step.
 print("Downloading model from Hugging Face Hub...")
 model_name = "distilgpt2"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
+# STEP 3 (Save locally)
 print(f"\nSaving model to {save_directory}...")
 # Save the model and tokenizer to the specified directory
 model.save_pretrained(save_directory)
 tokenizer.save_pretrained(save_directory)
 
+# STEP 3 (Use locally saved model. Note Model is nothing but a "binary file" which we have downlaoded in the STEP 3.)
+# -rw-rw-rw- 1 vscode vscode 327657928 Jan 19 14:01 model.safetensors
 # Now we can load from local directory instead of downloading again
 print("Loading model from local directory...")
 local_model = AutoModelForCausalLM.from_pretrained(save_directory)
@@ -73,7 +80,7 @@ def generate_text(prompt,
 
     return cleaned_text
 
-prompt = "Welcome to Fundamentals of AI Engineering on LinkedIn Learning. This class"
+prompt = "Welcome to this world of AI"
 
 print(f"Generated: {generate_text(prompt, temperature=0.9, max_length=75)}")
 
