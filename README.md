@@ -1,4 +1,6 @@
-## Flow
+![image](https://github.com/user-attachments/assets/3eef2074-fd69-47cd-8af0-36bab384a127)    
+
+## Flow  
 **Input text(Prompts) → Tokenization → Converting to IDs → Model processing → Next token prediction → Token selection → Building the response**   
 ```
 For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
