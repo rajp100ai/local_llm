@@ -1,4 +1,9 @@
-**Input (Prompt) -> Tokenizer ( converts human-readable text (like "AI world!") into a sequence of numbers (called tokens) -> LLMs**      
+**Input (Prompt) -> Tokenizer ( converts human-readable text (like "Hello world!") into a sequence of numbers (called tokens) -> LLMs**   
+```
+For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
+31373: 'hello'    
+ 6894: 'world'
+```
 #### Download LLM localy
 ```
 !uv pip install transformers
