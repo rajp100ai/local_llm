@@ -1,5 +1,5 @@
 ## Flow
-**Input text → Tokenization → Converting to IDs → Model processing → Next token prediction → Token selection → Building the response**   
+**Input text(Prompts) → Tokenization → Converting to IDs → Model processing → Next token prediction → Token selection → Building the response**   
 ```
 For example: 'hello' will be converted into token ID 31373 by Tokenizer as LLM only understand numbers     
 31373: 'hello'    
