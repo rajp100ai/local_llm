@@ -1,4 +1,6 @@
 ![image](https://github.com/user-attachments/assets/3eef2074-fd69-47cd-8af0-36bab384a127)    
+![image](https://github.com/user-attachments/assets/fc45709e-33f2-4f8a-a399-f7739043edef)     
+
 
 ## Flow  
 **Input text(Prompts) → Tokenization → Converting to IDs → Model processing → Next token prediction → Token selection → Building the response**   
