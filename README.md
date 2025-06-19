@@ -28,7 +28,10 @@ Special tokens:
 ---
 
 ## Also include RAG steps in the end to end flow (2):   
-![image](https://github.com/user-attachments/assets/5ede2a2e-beee-441b-9092-e0466a3ed9fc)
+![image](https://github.com/user-attachments/assets/5ede2a2e-beee-441b-9092-e0466a3ed9fc)   
+We need to pass 2 things to LLM:  
+ 1. Prompts
+ 2. Context (for that we can fetch embeddings from vector DB to build context (RAG) )     
 
 
   
